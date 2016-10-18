@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D1ADE971D9DA44E00A1D92E /* CurrencyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1ADE961D9DA44E00A1D92E /* CurrencyField.swift */; };
+		0DABCC301DB5E1B4003B333D /* CurrencyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABCC2E1DB5E1B4003B333D /* CurrencyField.swift */; };
+		0DABCC311DB5E1B4003B333D /* NewJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABCC2F1DB5E1B4003B333D /* NewJobViewController.swift */; };
 		0DE0159D1D9B4700001C3EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0159C1D9B4700001C3EFF /* AppDelegate.swift */; };
 		0DE015A21D9B4700001C3EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE015A01D9B4700001C3EFF /* Main.storyboard */; };
 		0DE015A41D9B4700001C3EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE015A31D9B4700001C3EFF /* Assets.xcassets */; };
 		0DE015A71D9B4700001C3EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE015A51D9B4700001C3EFF /* LaunchScreen.storyboard */; };
 		0DE015AF1D9B475F001C3EFF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE015AE1D9B475F001C3EFF /* MainScreenViewController.swift */; };
-		0DE015B11D9B4C7D001C3EFF /* NewJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE015B01D9B4C7D001C3EFF /* NewJobViewController.swift */; };
 		0DE015B31D9B8276001C3EFF /* SelectedJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE015B21D9B8276001C3EFF /* SelectedJobViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D1ADE961D9DA44E00A1D92E /* CurrencyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyField.swift; path = ../CurrencyField.swift; sourceTree = "<group>"; };
-		0DE015991D9B4700001C3EFF /* iCan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DABCC2E1DB5E1B4003B333D /* CurrencyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyField.swift; sourceTree = "<group>"; };
+		0DABCC2F1DB5E1B4003B333D /* NewJobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewJobViewController.swift; sourceTree = "<group>"; };
+		0DE015991D9B4700001C3EFF /* uService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE0159C1D9B4700001C3EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE015A11D9B4700001C3EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DE015A31D9B4700001C3EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DE015A61D9B4700001C3EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DE015A81D9B4700001C3EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE015AE1D9B475F001C3EFF /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
-		0DE015B01D9B4C7D001C3EFF /* NewJobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewJobViewController.swift; path = ../NewJobViewController.swift; sourceTree = "<group>"; };
 		0DE015B21D9B8276001C3EFF /* SelectedJobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedJobViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +44,7 @@
 		0DE015901D9B4700001C3EFF = {
 			isa = PBXGroup;
 			children = (
-				0DE0159B1D9B4700001C3EFF /* iCan */,
+				0DE0159B1D9B4700001C3EFF /* uService */,
 				0DE0159A1D9B4700001C3EFF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,16 +52,16 @@
 		0DE0159A1D9B4700001C3EFF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0DE015991D9B4700001C3EFF /* iCan.app */,
+				0DE015991D9B4700001C3EFF /* uService.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0DE0159B1D9B4700001C3EFF /* iCan */ = {
+		0DE0159B1D9B4700001C3EFF /* uService */ = {
 			isa = PBXGroup;
 			children = (
-				0D1ADE961D9DA44E00A1D92E /* CurrencyField.swift */,
-				0DE015B01D9B4C7D001C3EFF /* NewJobViewController.swift */,
+				0DABCC2E1DB5E1B4003B333D /* CurrencyField.swift */,
+				0DABCC2F1DB5E1B4003B333D /* NewJobViewController.swift */,
 				0DE0159C1D9B4700001C3EFF /* AppDelegate.swift */,
 				0DE015A01D9B4700001C3EFF /* Main.storyboard */,
 				0DE015B21D9B8276001C3EFF /* SelectedJobViewController.swift */,
@@ -70,15 +70,16 @@
 				0DE015A51D9B4700001C3EFF /* LaunchScreen.storyboard */,
 				0DE015A81D9B4700001C3EFF /* Info.plist */,
 			);
+			name = uService;
 			path = iCan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0DE015981D9B4700001C3EFF /* iCan */ = {
+		0DE015981D9B4700001C3EFF /* uService */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0DE015AB1D9B4700001C3EFF /* Build configuration list for PBXNativeTarget "iCan" */;
+			buildConfigurationList = 0DE015AB1D9B4700001C3EFF /* Build configuration list for PBXNativeTarget "uService" */;
 			buildPhases = (
 				0DE015951D9B4700001C3EFF /* Sources */,
 				0DE015961D9B4700001C3EFF /* Frameworks */,
@@ -88,9 +89,9 @@
 			);
 			dependencies = (
 			);
-			name = iCan;
+			name = uService;
 			productName = iCan;
-			productReference = 0DE015991D9B4700001C3EFF /* iCan.app */;
+			productReference = 0DE015991D9B4700001C3EFF /* uService.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0DE015941D9B4700001C3EFF /* Build configuration list for PBXProject "iCan" */;
+			buildConfigurationList = 0DE015941D9B4700001C3EFF /* Build configuration list for PBXProject "uService" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -123,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0DE015981D9B4700001C3EFF /* iCan */,
+				0DE015981D9B4700001C3EFF /* uService */,
 			);
 		};
 /* End PBXProject section */
@@ -148,9 +149,9 @@
 			files = (
 				0DE0159D1D9B4700001C3EFF /* AppDelegate.swift in Sources */,
 				0DE015B31D9B8276001C3EFF /* SelectedJobViewController.swift in Sources */,
+				0DABCC311DB5E1B4003B333D /* NewJobViewController.swift in Sources */,
 				0DE015AF1D9B475F001C3EFF /* MainScreenViewController.swift in Sources */,
-				0D1ADE971D9DA44E00A1D92E /* CurrencyField.swift in Sources */,
-				0DE015B11D9B4C7D001C3EFF /* NewJobViewController.swift in Sources */,
+				0DABCC301DB5E1B4003B333D /* CurrencyField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +279,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Real-Big-Labs.iCan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -291,6 +293,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Real-Big-Labs.iCan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -298,7 +301,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0DE015941D9B4700001C3EFF /* Build configuration list for PBXProject "iCan" */ = {
+		0DE015941D9B4700001C3EFF /* Build configuration list for PBXProject "uService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0DE015A91D9B4700001C3EFF /* Debug */,
@@ -307,7 +310,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0DE015AB1D9B4700001C3EFF /* Build configuration list for PBXNativeTarget "iCan" */ = {
+		0DE015AB1D9B4700001C3EFF /* Build configuration list for PBXNativeTarget "uService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0DE015AC1D9B4700001C3EFF /* Debug */,

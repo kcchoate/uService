@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:iCan.xcodeproj">
+      location = "self:/Users/kendrickchoate/Development/iCan/uService.xcodeproj">
    </FileRef>
 </Workspace>

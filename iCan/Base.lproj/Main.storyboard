@@ -10,7 +10,7 @@
         <!--Jobs in Your Area-->
         <scene sceneID="0I7-kl-7KF">
             <objects>
-                <tableViewController id="cLq-y7-tx1" customClass="MainScreenViewController" customModule="iCan" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="cLq-y7-tx1" customClass="MainScreenViewController" customModule="uService" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lsg-5J-tN8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
         <!--Selected Job View Controller-->
         <scene sceneID="Rwm-Hh-Ic1">
             <objects>
-                <viewController id="10T-ss-mZx" customClass="SelectedJobViewController" customModule="iCan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="10T-ss-mZx" customClass="SelectedJobViewController" customModule="uService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZYs-l1-HAN"/>
                         <viewControllerLayoutGuide type="bottom" id="7oQ-aB-qCr"/>
@@ -147,7 +147,7 @@
         <!--New Job-->
         <scene sceneID="2NS-dR-AAZ">
             <objects>
-                <viewController title="New Job" id="0XR-OF-qK8" customClass="NewJobViewController" customModule="iCan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Job" id="0XR-OF-qK8" customClass="NewJobViewController" customModule="uService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fmR-hC-TMK"/>
                         <viewControllerLayoutGuide type="bottom" id="whE-f0-qKu"/>
@@ -176,7 +176,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J86-iG-r8q" userLabel="Price Text Field" customClass="CurrencyField" customModule="iCan" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J86-iG-r8q" userLabel="Price Text Field" customClass="CurrencyField" customModule="uService" customModuleProvider="target">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
