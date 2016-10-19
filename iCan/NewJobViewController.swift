@@ -43,6 +43,7 @@ class NewJobViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.toolbar.isHidden = false
         //we set the navigation toolbar to not be hidden as it is hidden by default and our addjob button is on the navigation toolbar
         navigationController?.setToolbarHidden(false, animated: true)
         bottomAddJobButton.isEnabled = false
