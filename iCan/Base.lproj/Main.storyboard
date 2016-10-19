@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3nf-Bp-cJK" id="8IL-R9-oZx">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -31,7 +31,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Jobs in Your Area" id="GJQ-8M-VKY">
-                        <barButtonItem key="leftBarButtonItem" title="More" id="c3r-ad-dmL"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BzB-cl-PMW">
                             <connections>
                                 <segue destination="0XR-OF-qK8" kind="show" identifier="FromMainToNewJob" id="D0o-Vl-SXs"/>
@@ -298,7 +297,7 @@
         <!--Login Screen-->
         <scene sceneID="web-Zc-5dm">
             <objects>
-                <viewController id="ZK2-Bf-gMo" userLabel="Login Screen" sceneMemberID="viewController">
+                <viewController id="ZK2-Bf-gMo" userLabel="Login Screen" customClass="LoginViewController" customModule="uService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zox-Di-1bt"/>
                         <viewControllerLayoutGuide type="bottom" id="va1-Jh-SOm"/>
