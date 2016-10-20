@@ -1,9 +1,6 @@
 //
 //  SelectedJobViewController.swift
-//  iCan
-//
-//  Created by Kendrick Choate on 9/27/16.
-//  Copyright © 2016 Kendrick Choate. All rights reserved.
+//  uService
 //
 
 import UIKit

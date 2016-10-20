@@ -1,28 +1,13 @@
 //
 //  MainScreenViewController.swift
-//  iCan
+//  uService
 //
-//  Created by Kendrick Choate on 9/27/16.
-//  Copyright © 2016 Kendrick Choate. All rights reserved.
-//
-
 import UIKit
-//an extension to the UIViewController that allows for the keyboard to be closed when the screen is tapped anywhere. Call self.hideKeyboardWhenTappedAround() in ViewDidLoad to enable the function for the view controller you are on
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
+
 
 class MainScreenViewController: UITableViewController, NewJobDelegate {
     var allVisibleJobs: [[NewJob]] = [[], [], [], []]
     var chosenCell = (0,0)
-    var atLeastOneJob = false
     var jobCategories = ["Housework", "Landscaping", "Painting", "Woodwork"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +39,6 @@ class MainScreenViewController: UITableViewController, NewJobDelegate {
         else if aNewJob.jobCategory == jobCategories[3] {
             allVisibleJobs[3].append(aNewJob)
         }
-        atLeastOneJob = true
         self.tableView.reloadData()
     }
     
@@ -74,10 +58,8 @@ class MainScreenViewController: UITableViewController, NewJobDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //In order to have detailTextLabel, we must setup the cell with the .subtitle style as done below
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "reuseIdentifier")
-        //if atLeastOneJob {
             cell.textLabel!.text = allVisibleJobs[indexPath.section][indexPath.row].jobTitle
             cell.detailTextLabel!.text = allVisibleJobs[indexPath.section][indexPath.row].jobDetails
-        //}
         return cell
     }
     
@@ -85,44 +67,9 @@ class MainScreenViewController: UITableViewController, NewJobDelegate {
         chosenCell = (indexPath.section, indexPath.row)
         performSegue(withIdentifier: "SelectedJobSegue", sender: self)
     }
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //When we first perform the segue to the add a job page we set this class as the delegate so that we can get the data back from the next view controller
         if segue.identifier == "FromMainToNewJob" {
@@ -149,4 +96,16 @@ class MainScreenViewController: UITableViewController, NewJobDelegate {
         }
     }
 
+}
+
+//an extension to the UIViewController that allows for the keyboard to be closed when the screen is tapped anywhere. Call self.hideKeyboardWhenTappedAround() in ViewDidLoad to enable the function for the view controller you are on
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

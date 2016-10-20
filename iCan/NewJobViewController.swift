@@ -1,11 +1,7 @@
 //
 //  NewJobViewController.swift
-//  iCan
+//  uService
 //
-//  Created by Kendrick Choate on 9/27/16.
-//  Copyright © 2016 Kendrick Choate. All rights reserved.
-//
-
 import UIKit
 
 protocol NewJobDelegate {
@@ -57,7 +53,7 @@ class NewJobViewController: UIViewController, UITextFieldDelegate, UITextViewDel
         let categoryCloseToolBar = UIToolbar()
         categoryCloseToolBar.barStyle = .default
         categoryCloseToolBar.isTranslucent = true
-        categoryCloseToolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        categoryCloseToolBar.tintColor = UIColor.blue
         categoryCloseToolBar.sizeToFit()
         let categoryDoneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(categoryOKClicked))
         let categorySpaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
@@ -70,12 +66,12 @@ class NewJobViewController: UIViewController, UITextFieldDelegate, UITextViewDel
         let dateCloseToolBar = UIToolbar()
         dateCloseToolBar.barStyle = .default
         dateCloseToolBar.isTranslucent = true
-        dateCloseToolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        dateCloseToolBar.tintColor = UIColor.blue
         dateCloseToolBar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(dateOKClicked))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(dateCancelClicked))
-        dateCloseToolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        let dateDoneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(dateOKClicked))
+        let dateSpaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let dateCancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(dateCancelClicked))
+        dateCloseToolBar.setItems([dateCancelButton, dateSpaceButton, dateDoneButton], animated: false)
         dateCloseToolBar.isUserInteractionEnabled = true
         jobDateTextField.inputAccessoryView = dateCloseToolBar
         
@@ -88,53 +84,6 @@ class NewJobViewController: UIViewController, UITextFieldDelegate, UITextViewDel
         //hide the keyboard when the user clicks on the screen
         self.hideKeyboardWhenTappedAround()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func addNewJobButtonPressed(_ sender: AnyObject) {
-        //We only perform any actions assuming the delegate for this classes protocol has been set. Assuming it as, we call the delegate method when the button is pressed. We then pop the view to go back to the previous screen
-        if delegate != nil {
-            // The next lines save the price text field string, saves the startIndex of the string, and then creates a substring of the price field w/o the $ character. Finally, we strip commas from the price in case the price includes any commas in it.
-            let priceField = jobPriceTextField.text!
-            let strippedPriceIndex = priceField.index(after: priceField.startIndex)
-            let jobPriceWithCommas = priceField.substring(from: strippedPriceIndex)
-            let jobPrice = Float(jobPriceWithCommas.replacingOccurrences(of: ",", with: ""))!
-            let jobTitle = jobTitleTextField.text!
-            let jobCategory = jobCategoryTextField.text!
-            let jobLocation = jobLocationTextField.text!
-            let jobDetails = jobDetailsTextField.text!
-            let dateFormatter = DateFormatter()
-            dateFormatter.locale = Locale(identifier: "en_US")
-            dateFormatter.dateStyle = .short
-            dateFormatter.timeStyle = .short
-            let jobDate = dateFormatter.date(from: jobDateTextField.text!)!
-            let usersNewJob = NewJob(newJobTitle: jobTitle, newJobCategory: jobCategory, newJobLocation: jobLocation, newJobDate: jobDate, newJobPrice: jobPrice, newJobDetails: jobDetails)
-            delegate?.addJobButtonPressed(aNewJob: usersNewJob)
-            _ = navigationController?.popViewController(animated: true) // Swift 3 has changed behavior and any function that returns something that can be discarded now gives a warning when doing so. By assigning the result to _ we can get rid of the stupid warning.
-        }
-    }
-    //The next two functions configure the JobDateTextField to open a UIDatePicker and update the text as the UIDatePicker updates
-    @IBAction func JobDateTextFieldSelected(_ textField: UITextField) {
-        let datePicker = UIDatePicker()
-        let todaysDate = Date()
-        datePicker.minimumDate = todaysDate
-        datePicker.maximumDate = todaysDate.addingTimeInterval(31536000) // a year from the current date
-        datePicker.setDate(todaysDate, animated: true)
-        jobDateTextField.inputView = datePicker
-        datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
-        
-    }
-    
-    func datePickerChanged(sender: UIDatePicker) {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .short
-        jobDateTextField.text = formatter.string(from: sender.date)
-    }
-    
     
     func dateOKClicked() {
         jobDateTextField.resignFirstResponder()
@@ -149,6 +98,64 @@ class NewJobViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     func categoryCancelClicked() {
         jobCategoryTextField.text = ""
         jobCategoryTextField.resignFirstResponder()
+    }
+
+    
+    
+    @IBAction func addNewJobButtonPressed(_ sender: AnyObject) {
+        //We only perform any actions assuming the delegate for this classes protocol has been set. Assuming it as, we call the delegate method when the button is pressed. We then pop the view to go back to the previous screen
+        if delegate != nil {
+            let jobTitle = jobTitleTextField.text!
+            let jobCategory = jobCategoryTextField.text!
+            let jobLocation = jobLocationTextField.text!
+            let jobDetails = jobDetailsTextField.text!
+            // The next lines format the price field
+            let priceField = jobPriceTextField.text!
+            let strippedPriceIndex = priceField.index(after: priceField.startIndex)
+            let jobPriceWithCommas = priceField.substring(from: strippedPriceIndex)
+            let jobPrice = Float(jobPriceWithCommas.replacingOccurrences(of: ",", with: ""))!
+            // The next lines format the date field
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_US")
+            dateFormatter.dateStyle = .short
+            dateFormatter.timeStyle = .short
+            let jobDate = dateFormatter.date(from: jobDateTextField.text!)!
+            let usersNewJob = NewJob(newJobTitle: jobTitle, newJobCategory: jobCategory, newJobLocation: jobLocation, newJobDate: jobDate, newJobPrice: jobPrice, newJobDetails: jobDetails)
+            delegate?.addJobButtonPressed(aNewJob: usersNewJob)
+            _ = navigationController?.popViewController(animated: true) // Swift 3 has changed behavior and any function that returns something that can be discarded now gives a warning when doing so. By assigning the result to _ we can get rid of the stupid warning.
+        }
+    }
+    //The next two functions configure the JobDateTextField to open a UIDatePicker and update the text as the UIDatePicker updates
+    @IBAction func JobDateTextFieldSelected(_ textField: UITextField) {
+        let todaysDate = Date()
+        let datePicker = UIDatePicker()
+        datePicker.minimumDate = todaysDate
+        datePicker.maximumDate = todaysDate.addingTimeInterval(31536000) // a year from the current date
+        datePicker.setDate(todaysDate, animated: true)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        jobDateTextField.text = formatter.string(from: todaysDate)
+        jobDateTextField.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
+        
+    }
+    
+    func datePickerChanged(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        jobDateTextField.text = formatter.string(from: sender.date)
+    }
+    
+    @IBAction func jobCategoryTextFIeldSelected() {
+        jobCategoryTextField.text = "Housework"
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     //MARK: - UITextFieldDelegate
@@ -220,17 +227,19 @@ class NewJobViewController: UIViewController, UITextFieldDelegate, UITextViewDel
         return newLength <= 25
     }
     
+    //make textfields close the keyboard when pressing the return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    //MARK: - UITextViewDelegate
+    
     //limits the jobDetails field to maximum 300 characters
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
         let numberOfChars = newText.characters.count
         return numberOfChars <= 300;
-    }
-    
-    //make textfields close the keyboard when pressing the return key
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
     }
     
     //MARK: -  UIPickerViewDataSource

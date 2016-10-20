@@ -2,9 +2,6 @@
 //  LoginViewController.swift
 //  uService
 //
-//  Created by Kendrick Choate on 10/19/16.
-//  Copyright © 2016 Kendrick Choate. All rights reserved.
-//
 
 import UIKit
 
