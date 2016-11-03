@@ -34,7 +34,7 @@ class NewJobViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     @IBOutlet weak var jobDateTextField: UITextField!
     @IBOutlet weak var jobDetailsTextField: UITextView!
     @IBOutlet weak var bottomAddJobButton: UIButton!
-    
+    let colorDarkGreen = UIColor(colorLiteralRed: 62/255, green: 137/255, blue: 20/255, alpha: 1)
     var pickOption = ["Housework", "Landscaping", "Painting", "Woodwork"]
     var delegate: NewJobDelegate? = nil
     
@@ -51,7 +51,7 @@ class NewJobViewController: UIViewController, UITextFieldDelegate, UITextViewDel
         let categoryCloseToolBar = UIToolbar()
         categoryCloseToolBar.barStyle = .default
         categoryCloseToolBar.isTranslucent = true
-        categoryCloseToolBar.tintColor = UIColor.blue
+        categoryCloseToolBar.tintColor = colorDarkGreen
         categoryCloseToolBar.sizeToFit()
         let categoryDoneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(categoryOKClicked))
         let categorySpaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
@@ -64,7 +64,7 @@ class NewJobViewController: UIViewController, UITextFieldDelegate, UITextViewDel
         let dateCloseToolBar = UIToolbar()
         dateCloseToolBar.barStyle = .default
         dateCloseToolBar.isTranslucent = true
-        dateCloseToolBar.tintColor = UIColor.blue
+        dateCloseToolBar.tintColor = colorDarkGreen
         dateCloseToolBar.sizeToFit()
         let dateDoneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(dateOKClicked))
         let dateSpaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
