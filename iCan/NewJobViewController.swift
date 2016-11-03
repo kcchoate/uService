@@ -33,15 +33,13 @@ class NewJobViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     @IBOutlet weak var jobCategoryTextField: UITextField!
     @IBOutlet weak var jobDateTextField: UITextField!
     @IBOutlet weak var jobDetailsTextField: UITextView!
-    @IBOutlet weak var bottomAddJobButton: UIBarButtonItem!
+    @IBOutlet weak var bottomAddJobButton: UIButton!
+    
     var pickOption = ["Housework", "Landscaping", "Painting", "Woodwork"]
     var delegate: NewJobDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.toolbar.isHidden = false
-        //we set the navigation toolbar to not be hidden as it is hidden by default and our addjob button is on the navigation toolbar
-        navigationController?.setToolbarHidden(false, animated: true)
         bottomAddJobButton.isEnabled = false
         
         // We setup the picker view for the category text field here

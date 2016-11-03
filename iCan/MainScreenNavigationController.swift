@@ -11,14 +11,14 @@ class MainScreenNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //hiding the navigiation controller's navigation bar allows for the tableviewcontroller's navigation bar to function. We also hide the toolbar so that there are not two toolbars on the tableviewcontroller.
-        self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.toolbar.isHidden = true
+        //self.navigationController?.navigationBar.isHidden = true
+        //self.navigationController?.toolbar.isHidden = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.toolbar.isHidden = true
+        //self.navigationController?.navigationBar.isHidden = true
+        //self.navigationController?.toolbar.isHidden = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

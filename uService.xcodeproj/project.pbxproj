@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3FFA481DB96F090021A722 /* Ronald Reagan.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0D3FFA471DB96F090021A722 /* Ronald Reagan.jpeg */; };
 		0D9DF6511DB82F320010FCD3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DF6501DB82F320010FCD3 /* LoginViewController.swift */; };
 		0D9DF6531DB837170010FCD3 /* MainScreenNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DF6521DB837170010FCD3 /* MainScreenNavigationController.swift */; };
 		0D9DF6551DB838EE0010FCD3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9DF6541DB838EE0010FCD3 /* UserViewController.swift */; };
 		0DABCC301DB5E1B4003B333D /* CurrencyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABCC2E1DB5E1B4003B333D /* CurrencyField.swift */; };
 		0DABCC311DB5E1B4003B333D /* NewJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DABCC2F1DB5E1B4003B333D /* NewJobViewController.swift */; };
+		0DD272541DCB8E2F001AC3A0 /* Yellow_icon.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD272531DCB8E2F001AC3A0 /* Yellow_icon.svg.png */; };
+		0DD272561DCB9026001AC3A0 /* Grey_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD272551DCB9026001AC3A0 /* Grey_icon.png */; };
+		0DD2725A1DCB9DBC001AC3A0 /* Home-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD272591DCB9DBC001AC3A0 /* Home-30.png */; };
+		0DD2725E1DCB9F4A001AC3A0 /* Currency Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD2725B1DCB9F4A001AC3A0 /* Currency Filled-30.png */; };
+		0DD2725F1DCB9F4A001AC3A0 /* Search Property-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD2725C1DCB9F4A001AC3A0 /* Search Property-30.png */; };
+		0DD272601DCB9F4A001AC3A0 /* Settings-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD2725D1DCB9F4A001AC3A0 /* Settings-30.png */; };
+		0DD272631DCBA2B2001AC3A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD272621DCBA2B2001AC3A0 /* MapKit.framework */; };
+		0DD272651DCBA2C4001AC3A0 /* SearchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD272641DCBA2C4001AC3A0 /* SearchScreenViewController.swift */; };
 		0DE0159D1D9B4700001C3EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0159C1D9B4700001C3EFF /* AppDelegate.swift */; };
 		0DE015A21D9B4700001C3EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE015A01D9B4700001C3EFF /* Main.storyboard */; };
 		0DE015A41D9B4700001C3EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE015A31D9B4700001C3EFF /* Assets.xcassets */; };
@@ -21,11 +30,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D3FFA471DB96F090021A722 /* Ronald Reagan.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Ronald Reagan.jpeg"; path = "Assets.xcassets/Ronald Reagan.jpeg"; sourceTree = "<group>"; };
 		0D9DF6501DB82F320010FCD3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0D9DF6521DB837170010FCD3 /* MainScreenNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenNavigationController.swift; sourceTree = "<group>"; };
 		0D9DF6541DB838EE0010FCD3 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		0DABCC2E1DB5E1B4003B333D /* CurrencyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyField.swift; sourceTree = "<group>"; };
 		0DABCC2F1DB5E1B4003B333D /* NewJobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewJobViewController.swift; sourceTree = "<group>"; };
+		0DD272531DCB8E2F001AC3A0 /* Yellow_icon.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Yellow_icon.svg.png; path = ../../../Downloads/Yellow_icon.svg.png; sourceTree = "<group>"; };
+		0DD272551DCB9026001AC3A0 /* Grey_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grey_icon.png; path = ../../../Downloads/Grey_icon.png; sourceTree = "<group>"; };
+		0DD272591DCB9DBC001AC3A0 /* Home-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Home-30.png"; path = "../../../Downloads/Home-30.png"; sourceTree = "<group>"; };
+		0DD2725B1DCB9F4A001AC3A0 /* Currency Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Currency Filled-30.png"; path = "../../../Downloads/Currency Filled-30.png"; sourceTree = "<group>"; };
+		0DD2725C1DCB9F4A001AC3A0 /* Search Property-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Search Property-30.png"; path = "../../../Downloads/Search Property-30.png"; sourceTree = "<group>"; };
+		0DD2725D1DCB9F4A001AC3A0 /* Settings-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings-30.png"; path = "../../../Downloads/Settings-30.png"; sourceTree = "<group>"; };
+		0DD272621DCBA2B2001AC3A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0DD272641DCBA2C4001AC3A0 /* SearchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchScreenViewController.swift; sourceTree = "<group>"; };
 		0DE015991D9B4700001C3EFF /* uService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE0159C1D9B4700001C3EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE015A11D9B4700001C3EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,17 +59,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD272631DCBA2B2001AC3A0 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DD272611DCBA2B2001AC3A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DD272621DCBA2B2001AC3A0 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0DE015901D9B4700001C3EFF = {
 			isa = PBXGroup;
 			children = (
 				0DE0159B1D9B4700001C3EFF /* uService */,
 				0DE0159A1D9B4700001C3EFF /* Products */,
+				0DD272611DCBA2B2001AC3A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,16 +94,24 @@
 		0DE0159B1D9B4700001C3EFF /* uService */ = {
 			isa = PBXGroup;
 			children = (
+				0DD2725B1DCB9F4A001AC3A0 /* Currency Filled-30.png */,
+				0DD2725C1DCB9F4A001AC3A0 /* Search Property-30.png */,
+				0DD2725D1DCB9F4A001AC3A0 /* Settings-30.png */,
+				0DD272591DCB9DBC001AC3A0 /* Home-30.png */,
+				0DD272551DCB9026001AC3A0 /* Grey_icon.png */,
+				0DD272531DCB8E2F001AC3A0 /* Yellow_icon.svg.png */,
 				0DABCC2E1DB5E1B4003B333D /* CurrencyField.swift */,
 				0DABCC2F1DB5E1B4003B333D /* NewJobViewController.swift */,
 				0DE0159C1D9B4700001C3EFF /* AppDelegate.swift */,
 				0DE015A01D9B4700001C3EFF /* Main.storyboard */,
 				0D9DF6541DB838EE0010FCD3 /* UserViewController.swift */,
 				0D9DF6521DB837170010FCD3 /* MainScreenNavigationController.swift */,
+				0DD272641DCBA2C4001AC3A0 /* SearchScreenViewController.swift */,
 				0D9DF6501DB82F320010FCD3 /* LoginViewController.swift */,
 				0DE015B21D9B8276001C3EFF /* SelectedJobViewController.swift */,
 				0DE015AE1D9B475F001C3EFF /* MainScreenViewController.swift */,
 				0DE015A31D9B4700001C3EFF /* Assets.xcassets */,
+				0D3FFA471DB96F090021A722 /* Ronald Reagan.jpeg */,
 				0DE015A51D9B4700001C3EFF /* LaunchScreen.storyboard */,
 				0DE015A81D9B4700001C3EFF /* Info.plist */,
 			);
@@ -143,7 +179,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3FFA481DB96F090021A722 /* Ronald Reagan.jpeg in Resources */,
+				0DD272561DCB9026001AC3A0 /* Grey_icon.png in Resources */,
+				0DD2725A1DCB9DBC001AC3A0 /* Home-30.png in Resources */,
 				0DE015A71D9B4700001C3EFF /* LaunchScreen.storyboard in Resources */,
+				0DD2725F1DCB9F4A001AC3A0 /* Search Property-30.png in Resources */,
+				0DD2725E1DCB9F4A001AC3A0 /* Currency Filled-30.png in Resources */,
+				0DD272541DCB8E2F001AC3A0 /* Yellow_icon.svg.png in Resources */,
+				0DD272601DCB9F4A001AC3A0 /* Settings-30.png in Resources */,
 				0DE015A41D9B4700001C3EFF /* Assets.xcassets in Resources */,
 				0DE015A21D9B4700001C3EFF /* Main.storyboard in Resources */,
 			);
@@ -157,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D9DF6531DB837170010FCD3 /* MainScreenNavigationController.swift in Sources */,
+				0DD272651DCBA2C4001AC3A0 /* SearchScreenViewController.swift in Sources */,
 				0D9DF6551DB838EE0010FCD3 /* UserViewController.swift in Sources */,
 				0D9DF6511DB82F320010FCD3 /* LoginViewController.swift in Sources */,
 				0DE0159D1D9B4700001C3EFF /* AppDelegate.swift in Sources */,

@@ -11,13 +11,13 @@ class MainScreenViewController: UITableViewController, NewJobDelegate {
     var jobCategories = ["Housework", "Landscaping", "Painting", "Woodwork"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true // hide the back button from the login screen
-        self.navigationController?.toolbar.isHidden = true
+        //self.navigationItem.hidesBackButton = true // hide the back button from the login screen
+        //self.navigationController?.toolbar.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        self.navigationController?.toolbar.isHidden = true
+        //self.navigationController?.toolbar.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {

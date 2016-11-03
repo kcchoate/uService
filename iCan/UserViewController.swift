@@ -4,13 +4,28 @@
 //
 
 import UIKit
-
+class user {
+    var userID: Int
+    var firstName: String
+    var lastName: String
+    var emailAddress: String?
+    var phoneNumber: Int?
+    var userRating: Int
+    init () {
+        userID = 0
+        firstName = ""
+        lastName = ""
+        emailAddress = nil
+        phoneNumber = nil
+        userRating = 0
+    }
+}
 class UserViewController: UIViewController {
 
+    @IBOutlet weak var userImageOutlet: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
-        // Do any additional setup after loading the view.
+        //self.navigationController?.navigationBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
